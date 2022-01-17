@@ -35,7 +35,7 @@ const Home = (props) => {
   )
 }
 
-export const getStaticProps = async (props) => {
+export const getServerSideProps = async (props) => {
   const {locale} = props;
   const lang = locale === 'en' ? 'en-US': 'ru';
   const products = await client.getEntries({
